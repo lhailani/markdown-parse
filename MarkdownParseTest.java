@@ -49,6 +49,15 @@ public class MarkdownParseTest {
         ArrayList<String> expectedoutput = new ArrayList<>();
         assertEquals(links, expectedoutput);
     }
+    @Test
+    public void testGetLinks5() throws IOException {
+        Path fileName = Path.of("image.md");
+        String contents = Files.readString(fileName);
+        ArrayList<String> links = MarkdownParse.getLinks(contents);
+        // Expected output
+        ArrayList<String> expectedoutput = new ArrayList<>();
+        assertEquals(links, expectedoutput);
+    }
 }
 
 
